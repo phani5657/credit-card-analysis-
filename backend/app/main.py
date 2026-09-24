@@ -23,7 +23,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://super-duper-pancake-4jr7wqwqvqv42jjpv-5500.app.github.dev"
+        "https://credit-card-analysis-1.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
