@@ -9,7 +9,7 @@
    ========================================================= */
 
 const API_BASE_URL =
-    "https://super-duper-pancake-4jr7wqwqvqv42jjpv-8000.app.github.dev";
+    "https://credit-card-analysis-zwxj.onrender.com";
 
 
 /* =========================================================
