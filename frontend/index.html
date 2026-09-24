@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            Credit Card Analyzer
+        </div>
+
+        <div id="userSection" class="user-section hidden">
+            <span id="userName"></span>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= LOGIN / REGISTER ================= -->
+
+        <section id="authSection" class="auth-container">
+
+            <div class="auth-card">
+
+                <h1>Credit Card Analyzer</h1>
+
+                <p class="subtitle">
+                    Upload your credit card statement and analyze your spending.
+                </p>
+
+
+                <!-- LOGIN -->
+
+                <div id="loginForm">
+
+                    <h2>Login</h2>
+
+                    <form id="loginFormElement">
+
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button type="submit" class="primary-btn">
+                            Login
+                        </button>
+
+                    </form>
+
+                    <p class="switch-text">
+                        Don't have an account?
+                        <button id="showRegisterBtn" class="link-btn">
+                            Register
+                        </button>
+                    </p>
+
+                </div>
+
+
+                <!-- REGISTER -->
+
+                <div id="registerForm" class="hidden">
+
+                    <h2>Create Account</h2>
+
+                    <form id="registerFormElement">
+
+                        <label>Name</label>
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button type="submit" class="primary-btn">
+                            Register
+                        </button>
+
+                    </form>
+
+                    <p class="switch-text">
+                        Already have an account?
+                        <button id="showLoginBtn" class="link-btn">
+                            Login
+                        </button>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATION ================= -->
+
+        <section id="appSection" class="hidden">
+
+
+            <!-- USER -->
+
+            <div class="welcome-section">
+
+                <h1>
+                    Welcome, <span id="welcomeName"></span>
+                </h1>
+
+                <p>
+                    Upload your credit card statement and ask questions about your spending.
+                </p>
+
+            </div>
+
+
+            <!-- ================= UPLOAD ================= -->
+
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Upload Statement</h2>
+
+                        <p>
+                            Upload your credit card statement as a PDF.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form id="uploadForm">
+
+                    <div class="file-box">
+
+                        <input
+                            type="file"
+                            id="pdfFile"
+                            accept="application/pdf"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Upload Statement
+                    </button>
+
+                </form>
+
+                <div id="uploadMessage"></div>
+
+            </section>
+
+
+            <!-- ================= DOCUMENTS ================= -->
+
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>My Statements</h2>
+
+                        <p>
+                            Your uploaded credit card statements.
+                        </p>
+                    </div>
+
+                    <button id="refreshDocumentsBtn" class="secondary-btn">
+                        Refresh
+                    </button>
+
+                </div>
+
+
+                <div id="documentsContainer">
+
+                    <p class="loading">
+                        Loading documents...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= QUERY ================= -->
+
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Ask About Your Spending</h2>
+
+                        <p>
+                            Ask questions about your uploaded statements.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form id="queryForm">
+
+                    <textarea
+                        id="question"
+                        placeholder="Example: How much did I spend on dining?"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="primary-btn">
+                        Ask Question
+                    </button>
+
+                </form>
+
+
+                <div id="queryLoading" class="hidden loading">
+                    Analyzing your statement...
+                </div>
+
+
+                <div id="answerContainer" class="answer-container hidden">
+
+                    <h3>Answer</h3>
+
+                    <div id="answer"></div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ================= ERROR / STATUS ================= -->
+
+            <div id="globalMessage"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
