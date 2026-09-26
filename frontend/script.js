@@ -9,7 +9,7 @@
    ========================================================= */
 
 const API_BASE_URL =
-    "https://credit-card-analysis-zwxj.onrender.com";
+    "https://credit-card-analysis-wvin.onrender.com";
 
 
 /* =========================================================
