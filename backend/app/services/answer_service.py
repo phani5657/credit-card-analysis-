@@ -191,6 +191,8 @@ and every transcation should start on new line
 
 13. When the same question and same transaction data are provided,
     produce the same answer and numerical result.
+    
+14. Always remember Total due amount is always greater than minimum due amount and due amount/credit card bill/bill amount on particular month means credit card bill
 
 USER QUESTION:
 {question}
